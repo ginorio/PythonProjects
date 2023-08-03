@@ -17,10 +17,11 @@ if response.status_code == 200:
 
     # Get the response data
     weather_data = response.json()
-
+    
     # Print the weather information
     print("Il tempo atmosferico a " + location + " è questo :")
     print("* Temperatura: " + str(weather_data["main"]["temp"]) + "°C")
+    print("* Temperatura percepita: " + str(weather_data["main"]["feels_like"]) + "°C")
     print("* Umidità: " + str(weather_data["main"]["humidity"]) + "%")
     print("* Pressione: " + str(weather_data["main"]["pressure"]) + "hPa")
     print("* Velocità del vento " + str(weather_data["wind"]["speed"]) + "m/s")
